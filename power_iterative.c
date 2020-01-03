@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+	int a,n;
+	scanf("%d %d",&a,&n);
+	int k,b,c;
+	k=n;b=1;c=a;
+	while(k != 0){
+		if(0==k%2){
+			k=k/2;
+			c=c*c;			
+		}else{
+			k=k-1;
+			b=b*c;
+		}
+		
+	}
+	printf("%d",b);
+	return 0;
+}
+
+// Problem : calculate a^n.
+// Design Approach : Divide & Conquer - iterative 
