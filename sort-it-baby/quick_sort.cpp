@@ -4,6 +4,7 @@ using namespace std;
 // Shortcuts for "common" data types in contests
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<long long> vll;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
 typedef set<int> si;
@@ -55,7 +56,16 @@ void qsort(ll* a, int l, int u){
 }
 
 int main() {
-    ll number[] = {4, 1, 6, 8, 123, 13, 1121, 24, 123};
-    qsort(number, 0, 8);
-    REP(i, 0, 8) cout << number[i] << " ";
+    int n;
+    cout << "Enter number of element in unsorted array:" << endl;
+    cin >> n; 
+    ll numbers[n];
+    cout << "Enter the unsorted numbers:" << endl;
+    int i = -1;
+    while(++i != n) {
+        cin >> numbers[i];
+    }
+    qsort(numbers, 0, n-1);
+    cout << "Numbers in sorted order using Quick Sort:" << endl;
+    REP(i, 0, n-1) cout << numbers[i] << " ";
 }
