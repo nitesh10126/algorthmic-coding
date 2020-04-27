@@ -25,6 +25,16 @@ void swap(ll* a, int i, int j) {
 Assumes given array 'a' as invalid maxheap and element at index 'i' is violating the maxheap property.
 This method makes such array 'a' a valid maxheap.
 Runs in O(log(n)) time.
+
+while the maximal element is not t but one of its sons
+    do begin
+    if it is the right son then begin
+        exchange t and its right son; t:= right son;
+    end else begin {maximal element = the left son of t}
+        exchange t and its left son; t:= left son;
+    end
+end
+
 */
 void max_heapify(ll* a, int i, int n) {
         int curr = i;
